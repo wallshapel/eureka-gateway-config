@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+#  Existen varios perfiles, el de producción, desarrollo, nativo etc...
+  profiles:
+    active: native
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        native:
+#          Indicamos el directorio donde se encontrará la configuración de todos los ms. Esto quiere decir que en este mismo nivel se encuentra el directorio configurations
+          search-locations: classpath:/configurations
+
+

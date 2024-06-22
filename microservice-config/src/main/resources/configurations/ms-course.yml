@@ -1,0 +1,31 @@
+# Configuramos el puerto de este ms.
+server:
+  port: 9090
+
+# Establecemos el nombre a nuestra app
+spring:
+  application:
+    name: ms-course
+  # Configuramos la conexi�n a base de datos
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/spring_ms_course
+    username: postgres
+    password: 456
+    # Ejecutamos el archivo import.sql al levantar la app
+    initialization-mode: always
+  # Configuramos el ORM Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# Configuramos el servidor de EUREKA para que los microservicios se puedan registrar en �l
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # Establecemos la ruta del ms eureka
+    server-url:
+      defaultZone: http://localhost:8761/eureka/

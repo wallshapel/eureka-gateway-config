@@ -1,0 +1,21 @@
+# Configuramos el puerto de este microservicio. El puerto por defecto donde funciona EUREKA es el 8761
+server:
+  port: 8761
+
+# Establecemos el nombre a nuestra app
+spring:
+  application:
+    name: ms-eureka
+
+# Configuramos el servidor de EUREKA para que los microservicios se puedan registrar en �l
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #    Por defecto Eureka se registra as� mismo, por lo que debemos indicarle aqu� que no lo vuelva a hacer poniendolo a false
+    register-with-eureka: false
+    fetch-registry: false
+    #    Establecemos la ruta para acceder a este ms
+    server-url:
+      #      Con ${server.port} indicamos que tome el valor de atributo port del par�metro server de este mismo archivo
+      defaultZone: http://localhost:${server.port}/eureka/

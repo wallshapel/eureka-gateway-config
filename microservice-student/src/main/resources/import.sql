@@ -1,0 +1,1 @@
+INSERT INTO students (name, last_name, email, course_id) VALUES ('John', 'Doe', 'john.doe@example.com', 1),('Jane', 'Smith', 'jane.smith@example.com', 2),('Michael', 'Johnson', 'michael.johnson@example.com', 3),('Emily', 'Davis', 'emily.davis@example.com', 4),('William', 'Brown', 'william.brown@example.com', 5);

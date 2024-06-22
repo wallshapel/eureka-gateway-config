@@ -1,0 +1,1 @@
+INSERT INTO courses (name, teacher) VALUES ('Mathematics', 'Dr. Alan Turing'), ('Physics', 'Dr. Marie Curie'), ('Chemistry', 'Dr. Linus Pauling'), ('Biology', 'Dr. Rosalind Franklin'), ('Computer Science', 'Dr. Ada Lovelace');
